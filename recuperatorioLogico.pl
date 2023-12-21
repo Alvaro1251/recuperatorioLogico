@@ -14,7 +14,7 @@ pieza(torre, negra, 2,1).
 pieza(torre, negra, 3,4).
 pieza(reina, negra, 5,5).
 
-pieza(alfil, blanca, 5, 5).
+pieza(alfil, blanca, 5,5).
 pieza(peon, negra, 2, 5).
 pieza(peon,blanca, 2, 4).
 
@@ -24,7 +24,9 @@ casilleroLibre(Fil, Col):- not(pieza(_, _, Fil, Col)), not(pieza(_, _, Fil, Col)
 
 % 2)
 % devuelve verdadero si hay dos piezas en el mismo casillero
-dosPiezasEnMismoCasillero(Pieza, Color, Fil, Col):-pieza(Pieza1, Color, Fil, Col), pieza(Pieza2, Color, Fil, Col), Pieza1 \=Pieza2. 
+dosPiezasEnMismoCasillero(Fil, Col):- pieza(Pieza1, _, Fil, Col), 
+    pieza(Pieza2, _, Fil, Col), 
+    Pieza1 \=Pieza2. 
 
 
 % devuelve verdadero si hay una pieza fuera del tablero
