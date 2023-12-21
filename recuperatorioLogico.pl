@@ -70,8 +70,8 @@ puedeMoverseSinComer(torre, Color, Fil, Col, FilLlegada, Col) :- not(elementoExt
     FilLlegada \= Col, 
     not(pieza(Pieza, Color, Fil, FilLlegada)).
 
-puedeMoverseSinComer(torre, Color, Fil, Col, Fil, ColLegada) :- not(elementoExtranio(torre, Color, Fil, Col)), 
+puedeMoverseSinComer(torre, Color, Fil, Col, Fil, ColLlegada) :- not(elementoExtranio(torre, Color, Fil, Col)), 
     not(elementoExtranio(torre, Color, ColLlegada, Col)),
-    ColLegada \= Col, 
-    not(pieza(Pieza, Color, Fil, ColLegada)).
+    ColLlegada \= Col, 
+    not(pieza(Pieza, Color, Fil, ColLlegada)).
 
